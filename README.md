@@ -31,7 +31,6 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 |name|string|null: false, index: true|
