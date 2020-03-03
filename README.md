@@ -34,7 +34,7 @@
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|options|index: true|
+|name|string|null: false, index: true|
 ### Association
 - has_many :messages
 - has_many through::groups_users
