@@ -2,10 +2,10 @@
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-- belongs_to :groups
-- belongs_to :users
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+- belongs_to :group
+- belongs_to :user
 
 
 ## groupsテーブル
@@ -22,10 +22,10 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 ### Association
-- belongs_to :groups
+- belongs_to :group
 - belongs_to :user
 
 ## usersテーブル
@@ -34,7 +34,8 @@
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
+|options|index: true|
 ### Association
 - has_many :messages
-- has_many :groups_users
+- has_many through::groups_users
 - has_many :groups, through:  groups_users
