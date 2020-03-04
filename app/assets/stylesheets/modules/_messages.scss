@@ -64,7 +64,7 @@
           font-size: inherit;
           text-rendering: auto;
           -webkit-font-smoothing: antialiased;
-          // -moz-osx-font-smoothing: grayscale;
+          
         }
 
         .fa-edit:before, .fa-pencil-square-o:before {
@@ -169,15 +169,6 @@
     }
   } 
     
-
-    // .list-top{
-    //   color: #333333;
-    //   font-size: 14px;
-    //   padding-top: 35px;
-      
-    // }
-  
-
   .chat-main__from{
     background-color: #d2d2d2;
     height: 90px;
@@ -187,7 +178,6 @@
       display: flex;
     }
       .input-box{
-        // width: 900px;
         position: relative;
         width: 100%;
         &__text{
@@ -206,23 +196,6 @@
           font-size: 25px;
         }
 
-      
-      
-      // &__left{
-      //   line-height: 50px;
-      //   width: 900px;
-        
-      //   &__message{
-      //     height: 50px;
-      //     width: 85%;
-      //     padding: 0 40px 0 10px;
-        
-      //     .chat-main__image__p{
-      //     font-size: 30px;
-      //     padding-left: 40px;
-      //     }
-      //   }
-      // }
       &__right{
         line-height: 50px;
         
@@ -249,31 +222,3 @@
     }
     
   }
-
-
-  // .chat-main{
-  //   &__message{
-  //     color: #000;
-  //     &__left{
-  //       width: 400px;
-  //       &__name{
-  //         font-size: 30px;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // .chat-main__list{
-  //   &__message{
-  //     &__user-name{
-
-  //     }
-  //     &__date{
-        
-  //     }
-  //   }
-  //   &__text{
-
-  //   }
-  // }
-
