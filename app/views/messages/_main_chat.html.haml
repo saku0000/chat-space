@@ -1,0 +1,47 @@
+.chat-main
+  .chat-main__group-info
+    .main-leftbox
+      %h2.info test
+      %ul.menber-list Member:masa
+    .main-rightbox  
+      %a(href="#")Edit  
+          
+  .chat-main__list
+    .chat-main__list__message
+      .chat-main__list__message__user-name
+        yuri
+      .chat-main__list__message__date
+        2020/03/03(Tue) 21:09:07
+    .chat-main__list__text
+      おはよう
+
+  .chat-main__from
+    %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/20890/messages", :enctype => "multipart/form-data", :method => "post"}
+      .input-box
+        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        %label.input-box__image{:for => "message_image"}
+          %i.fa.fa-image
+     
+      -# %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+      -# %input{:name => "authenticity_token", :type => "hidden", :value => "EDf+CGIpkNhoJCfobtEz5MrqsOeKIb6pXzv2N/NR/epmVbWrdRSwaCYMQlYm+DzZ0bAGMf/wWnW89RpIFbrCjQ=="}/
+      
+          -# %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
+
+
+
+
+
+
+
+
+  -# .chat-main__from
+  -#   .chat-main__from__box
+  -#       %input.chat-main__from__box__left__message{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+  -#       %labe.chat-main__image__p
+  -#         = icon('far', 'image')
+  -#     .chat-main__from__box__right
+  -#       %a(href="#")Send
+
+

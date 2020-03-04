@@ -2,6 +2,8 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link(rel="stylesheet" href="_reset.scss")/
+    %link(rel="stylesheet" href="_messages.scss")/
     %title ChatSpace
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'

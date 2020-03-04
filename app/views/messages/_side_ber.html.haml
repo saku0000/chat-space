@@ -1,0 +1,25 @@
+
+.chat-side
+  .chat-side__header
+    .chat-side__header__box
+      -# .chat-side__header__box__user-name
+      masa
+      %ul.chat-side__header__box__menu
+        %li.chat-side__header__box__menu__new-group
+          = link_to "#", class: "chat-side__btn" do
+            = icon('fas','edit')
+          
+        %li.chat-side__header__box__menu__edit-user
+          = link_to "#", class: "chat-side__btn" do
+            = icon('fas','cog')
+
+  .groups
+    
+    %p.group__group-name
+      techcamp
+    %p.group__latest-message
+      まだメッセージがありません
+-# .chat-side
+-#   .chat-side__header
+-#     .chat-side__header__box
+-#       .chat-side__header__box__user-name
