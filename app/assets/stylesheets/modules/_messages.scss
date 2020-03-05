@@ -1,0 +1,220 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+}
+
+
+.chat-side {
+  width: 300px;
+  color: white;
+  
+
+
+  &__header {
+    background-color: #253141;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  
+
+    &__box {
+      height: 20px;
+      width: 260px;
+      
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+    
+      
+
+      &__menu {
+        display: flex;
+        justify-content: right;
+        width: 60px;
+        
+      
+
+        &__new-group{
+          color: #ffffff;
+
+        }
+        
+        &__edit-user{
+          color: #ffffff;
+        }
+
+        .chat-side a {
+          color: white;
+        }
+
+        .fa {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          
+        }
+
+        .fa-edit:before, .fa-pencil-square-o:before {
+          content: "\f044";
+          color: #ffffff;
+        }
+
+        .fa-gear:before, .fa-cog:before {
+          content: "\f013";
+          color: #ffffff;
+        }
+
+        li {
+          display: list-item;
+          text-align: -webkit-match-parent;
+          margin-left: 5px;
+          
+        }
+      }
+    }
+  }
+}
+  .chat-side .groups {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    overflow: scroll;
+
+    .group__group-name{
+      color: #ffffff bold;
+      line-height: 15px;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .group__latest-message{
+      color: #ffffff bold;
+      font-size: 11px;
+      line-height: 11px;
+    }
+  }
+
+  .chat-main{
+    width: calc(100% - 300px);
+    
+  
+    .chat-main__group-info{
+      background-color: #ffffff;
+      height: 100px;
+      border-bottom: 1px solid #eeeeee;
+      display: flex;
+      padding: 0 40px;
+      align-items: center;
+      justify-content: space-between;
+      .info{
+        color: #333333;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+      .menber-list{
+        color: #999999;
+        font-size: 12px;
+        margin-top: 15px;
+      }
+      .main-rightbox{
+        border: solid 1px #38aef0;
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 16px;
+        a{
+          color: #38aef0;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+
+  .chat-main__list{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 35px 40px;
+    overflow: scroll;
+    &__message{
+      display: flex;
+      padding-bottom: 12px;
+      &__user-name{
+        color: #333333;
+        font-size: 16px;
+      }
+      &__date{
+        color: #999999;
+        font-size: 12px;
+        padding-left: 5px;
+      }
+    }
+    &__text{
+      font-size: 14px;
+      color: #434a54;
+      padding-bottom: 46px;
+    }
+  } 
+    
+  .chat-main__from{
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    width: 100%;
+    form{
+      display: flex;
+    }
+      .input-box{
+        position: relative;
+        width: 100%;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+        }
+        &__image{
+          ont-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          font-size: 25px;
+        }
+
+      &__right{
+        line-height: 50px;
+        
+        
+        padding: 0 40px 0 15px;
+        
+        a{
+          color: white;
+          background-color: #38aef0;
+          cursor: pointer;
+          width: 150px;
+        }
+      }
+    }
+
+    .submit-btn{
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
+    }
+    
+  }
