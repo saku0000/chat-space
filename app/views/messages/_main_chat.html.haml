@@ -6,7 +6,7 @@
     .main-rightbox 
       = link_to "#", class: "chat-main__btn" do
         Edit
-      -# %a(href="#")Edit  
+       
           
   .chat-main__list
     .chat-main__list__message
@@ -18,11 +18,12 @@
       おはよう
 
   .chat-main__from
-    %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/20890/messages", :enctype => "multipart/form-data", :method => "post"}
+    %form#new_message.new_message
       .input-box
-        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-        %label.input-box__image{:for => "message_image"}
-          %i.fa.fa-image
-     
-      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+        %input#message_content.input-box__text
+        %label.input-box__image
+          = icon('fa','image',class: 'icon')
+          
+      %input.submit-btn{type: 'submit', value: 'Send'}
+          
 
