@@ -41,7 +41,7 @@ $(function(){
     };
   }
   $('#new_message').on('submit', function(e){
-    console.log(11)
+  
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
@@ -61,7 +61,7 @@ $(function(){
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $('form')[0].reset();
       $('.form__submit').removeAttr('disabled')
-      console.log("33")
+     
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
