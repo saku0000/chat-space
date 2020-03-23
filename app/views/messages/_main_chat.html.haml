@@ -10,32 +10,17 @@
       = link_to edit_group_path(@group.id), class: "chat-main__btn" do
         Edit
        
-  .messages
-    = render partial: 'message', collection: @messages
-
+ 
   .chat-main__list
-    .chat-main__list__message
-      .chat-main__list__message__user-name
-        yuri
-      .chat-main__list__message__date
-        2020/03/03(Tue) 21:09:07
-    .chat-main__list__text
-      おはよう
+    .messages
+      = render partial: 'message', collection: @messages
+      
 
   .chat-main__from
-    %form#new_message.new_message
-      .input-box
-        %input#message_content.input-box__text
-        %label.input-box__image
-          = icon('fa','image',class: 'icon')
-          
-      %input.submit-btn{type: 'submit', value: 'Send'}
-          
-  -# .form
-  -#   = form_for [@group, @message] do |f|
-  -#     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-  -#     .form__mask
-  -#       = f.label :image, class: 'form__mask__image' do
-  -#         = icon('fas', 'image', class: 'icon')
-  -#         = f.file_field :image, class: 'hidden'
-  -#     = f.submit 'Send', class: 'form__submit'
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit' 
