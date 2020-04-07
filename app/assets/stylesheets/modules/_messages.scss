@@ -88,18 +88,26 @@
     background-color: #2f3e51;
     padding: 20px 20px 0;
     overflow: scroll;
+    color: white;
 
-    .group__group-name{
-      color: #ffffff bold;
-      line-height: 15px;
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
+    .messages__a{
+      text-decoration: none;
+    
 
-    .group__latest-message{
-      color: #ffffff bold;
-      font-size: 11px;
-      line-height: 11px;
+      .group__group-name{
+        color: #ffffff;
+        line-height: 15px;
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .group__latest-message{
+        color: #ffffff;
+        font-size: 11px;
+        line-height: 11px;
+        font-weight: bold;
+      }
     }
   }
 
@@ -145,7 +153,7 @@
     height: calc(100vh - 190px);
     padding: 35px 40px;
     overflow: scroll;
-    &__message{
+    .upper-message{
       display: flex;
       padding-bottom: 12px;
       &__user-name{
@@ -157,7 +165,10 @@
         font-size: 12px;
         padding-left: 5px;
       }
-    }
+      &__content{
+        font-size: 12px;
+      }
+    } 
     &__text{
       font-size: 14px;
       color: #434a54;
