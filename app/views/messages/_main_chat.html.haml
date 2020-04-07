@@ -4,8 +4,9 @@
       %h2.info
         = @group.name
       %ul.menber-list
+        Menber:
         - @group.users.each do |user|
-          = user.name
+          =user.name
     .main-rightbox 
       = link_to edit_group_path(@group.id), class: "chat-main__btn" do
         Edit
